@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/L04DB4L4NC3R/jobs-mhrd/api/views"
-	pkg "github.com/L04DB4L4NC3R/jobs-mhrd/pkg"
+	"../../api/views"
+	pkg "../../pkg"
 	jwtmiddleware "github.com/auth0/go-jwt-middleware"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/spf13/viper"
