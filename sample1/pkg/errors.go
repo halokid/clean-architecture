@@ -1,4 +1,4 @@
-package errors
+package pkg
 /**
 统一定义错误返回信息
  */
