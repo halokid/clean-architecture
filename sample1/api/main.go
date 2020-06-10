@@ -8,8 +8,8 @@ import (
 
 	"../api/handler"
 	"../api/middleware"
-	"../pkg/admin"
-	"../pkg/user"
+	"../model/admin"
+	"../model/user"
 	"github.com/gorilla/handlers"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

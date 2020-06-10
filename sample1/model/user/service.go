@@ -35,6 +35,7 @@ type service struct {
 }
 
 func NewService(r Repository) Service {
+	// todo: 秘诀就是， 建一个函数， 这个函数是 new+文件夹名字， 作为这个文件夹归类源码逻辑的入口
 	return &service{
 		repo: r,
 	}

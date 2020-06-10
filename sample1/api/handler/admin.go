@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"../middleware"
 	"../../api/views"
-	"../../pkg/admin"
+	"../../model/admin"
+	"../middleware"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/spf13/viper"
 )

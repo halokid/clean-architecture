@@ -6,7 +6,7 @@ import (
 
 	"../../api/middleware"
 	"../../api/views"
-	"../../pkg/user"
+	"../../model/user"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/spf13/viper"
 )
