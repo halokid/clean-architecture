@@ -62,7 +62,10 @@ func main() {
 	// migrations
 	db.AutoMigrate(&user.User{}, &admin.Admin{})
 
+	// todo: 源码的艺术，  建立db， repo对接db， handler对接repo
 	// initializing repos and services
+	// fixme: 我觉得这里user 和 admin共用一个repo就可以了， 没必要分开两个声明
+	// fixme: 但是假如要用一个repo的话， 那么就必须在model文件夹的首层目录就定义repo的声明源码，不能再子文件夹定义
 	userRepo := user.NewPostgresRepo(db)
 	adminRepo := admin.NewPostgresRepo(db)
 
@@ -72,6 +75,8 @@ func main() {
 	// Initializing handlers
 	r := http.NewServeMux()
 
+	// todo: repo数据层分两层， entity+repo+实际数据库操作 为一层， service问一层，
+	// todo: 最终的效果都是传内存声明到handler去, userSvc就是这个内存声明
 	handler.MakeUserHandler(r, userSvc)
 	handler.MakeAdminHandler(r, adminSvc)
 
